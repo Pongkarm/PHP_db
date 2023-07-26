@@ -28,7 +28,7 @@ body{
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 20px;
-    border: 1px solid #FF9900;
+    border: 1px solid #178cf2;
   }
 .botton{
     background-color: #a418e0;
@@ -50,5 +50,14 @@ body{
    max-width: 800px ;
    margin: auto ; 
 }
-
+.center{
+    display: flex;
+    justify-items:center;
+    align-items: center;
+    height: 200px;
+}
+.text-center{
+    text-align:center;
+    color: #44e119;
+}
 

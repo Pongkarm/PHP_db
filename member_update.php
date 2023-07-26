@@ -10,11 +10,12 @@ $sql ="UPDATE tbl_member SET
     WHERE id='$_GET[id]' ";
 
 if (mysqli_query($conn,$sql)) {
-    echo"update done";
+    echo"แก้ไขข้อมูลเรียบร้อย";
     header("location: member_show.php");
 } else {
     echo "error deleting record" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
+
 ?>

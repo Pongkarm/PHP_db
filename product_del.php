@@ -1,14 +1,18 @@
 <?php
 include "connect.php";
 
-$sql="DELETE FROM tbl_product WHERE id='$_GET[id]'"; 
+$sql = "DELETE FROM tbl_product WHERE id='$_GET[id]'";
 
-if (mysqli_query($conn,$sql)) {
-    echo"deleting done";
-    header("location: product_show.php");
+if (mysqli_query($conn, $sql)) {
+  echo "ลบข้อมูลเรียบร้อย";
+  $message = "wrong answer";
+  echo "<script type='text/javascript'>alert('$message');</script>";
+  header("location: product_show.php");
+  
 } else {
-    echo "error deleting record" . mysqli_error($conn);
+  echo "Error deleting record: " . mysqli_error($conn);
 }
 
 mysqli_close($conn);
+
 ?>
